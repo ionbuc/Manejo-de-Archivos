@@ -17,7 +17,7 @@ print "Inicia la toma de datos"
 
 try:
 	while True:
-		print "acerque el objeto para medir la distancia"
+		print ("acerque el objeto para medir la distancia")
 		GPIO.output(GPIO_TRIGGER,True)
 		time.sleep(0.00001)
 		GPIO.output(GPIO_TRIGGER,False)
@@ -41,6 +41,6 @@ try:
 			print "creando el archivo"
 
 except KeyboardInterrupt:
-	print '\n' + 'termina la captura de datos.' + '\n'
+	print( '\n' + 'termina la captura de datos.' + '\n')
 	f.close
 	GPIO.cleanup()

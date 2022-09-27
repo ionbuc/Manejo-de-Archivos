@@ -13,7 +13,7 @@ sFileStamp = time.strftime('%Y%m%d%H')
 sFileName = '\out' + sFileStamp + '.txt'
 f=open(sFileName, 'a')
 f.write('TimeStamp,Value' + '\n')
-print "Inicia la toma de datos"
+print ("Inicia la toma de datos")
 
 try:
 	while True:
@@ -30,10 +30,10 @@ try:
 		distance = (elapsed * 34300)/2
 		sTimeStamp = time.strftime('%Y%m%d%H%M%S')
 		f.write(sTimeStamp + ',' + str(distance) + '\n')
-		print sTimeStamp + ' ' + str(distance)
+		print(sTimeStamp + ' ' + str(distance))
 		time.sleep(1)
 		sTmpFileStamp = time.strftime('%Y%m%d%H')
-		if sTmpFileStamp <> sFileStamp:
+		if sTmpFileStamp != sFileStamp:
 		  	f.close
 		   	sFileName = 'out/' + sTmpFileStamp + '.txt'
 		   	f=open(sFileName, 'a')
